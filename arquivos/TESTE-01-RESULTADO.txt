@@ -1,0 +1,71 @@
+ add $t0, $s7, $s1
+nop
+nop
+sub $t1, $t0, $s2
+nop
+nop
+mul $t2, $t1, $s3
+div $t3, $t2, $s4
+add $t4, $t3, $s5
+nop
+nop
+sub $t5, $t4, $s6
+nop
+nop
+mul $t6, $t5, $s7
+div $t7, $t6, $s1
+addi $t0, $t7, 10
+nop
+nop
+subi $t1, $t0, 5
+andi $t2, $t1, 3
+nop
+nop
+ori $t3, $t2, 4
+nop
+nop
+xor $t4, $t3, $s2
+nop
+nop
+nor $t5, $t4, $s3
+nop
+nop
+sll $t6, $t5, 2
+nop
+nop
+srl $t7, $t6, 2
+nop
+nop
+lw $t0, 0($t7)
+nop
+nop
+sw $t0, 4($t7)
+beq $t0, $t1, label
+bne $t1, $t2, label
+j loop
+addi $t0, $t0, 1
+nop
+addi $t1, $t1, 1
+bne $t0, $t2, loop
+nop
+lui $t2, 
+nop
+nop
+ori $t2, $t2,
+addi $t3, $zero, 5
+nop
+nop
+bgez $t3, posLabel
+bltz $t3, negLabel
+addi $t3, $t3, -1
+nop
+j endLabel
+addi $t3, $t3, 1
+nop
+addi $t4, $zero, 0
+nop
+nop
+slt $t5, $t3, $t4
+nop
+nop
+move $a0, $t5
